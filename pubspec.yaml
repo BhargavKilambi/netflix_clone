@@ -46,6 +46,7 @@ flutter:
    - assets/images/order.png
    - assets/images/ghoul.jpg
    - assets/images/hox.jpg
+   - assets/images/str2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

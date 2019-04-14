@@ -87,16 +87,134 @@ Widget build(BuildContext context){
                 height: 10.0,
                 width: double.infinity,
               ),
-          new Column(
+          new Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              SizedBox(width:10.0,height:10.0),
+              Text.rich(
+                     TextSpan(
+                       text:'Continue watching for Ram'
+                     ),style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 14.0,
+                       fontWeight: FontWeight.w800
+                     ),
+                   )
+            ],
+          ),
+             Container(
+          margin: EdgeInsets.symmetric(vertical: 5.0),
+          height: 240.0,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                Container(
+                  height: 200.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/ghoul.jpg')
+                  )
+                ),
+                child: new Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                      Center(
+                  child: Icon(Icons.play_circle_outline,color: Colors.white.withOpacity(0.8),size:80.0),
+                ),
+                
+                  ],
+                ),
+                margin: EdgeInsets.symmetric(horizontal: 5.0),
+                width: 130.0,
+              ),
+              Container(
+                color: Colors.black,
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  
+                  children: <Widget>[
+                    Text.rich(
+                     TextSpan(
+                       text:'S01:E03'
+                     ),style: TextStyle(
+                       color: Colors.white.withOpacity(0.7),
+                       fontSize: 19.0,
+                       fontWeight: FontWeight.w600
+                     ),
+                   ),
+                   SizedBox(height: 40.0,width: 15.0,),
+                   Icon(Icons.info_outline,color:Colors.grey,size:22.0)
+                    
+                ],),
+                height: 40.0,
+                width:130.0
+              ),
+              ],
+              ),
+                            Column(
+                children: <Widget>[
+                Container(
+                  height: 200.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/str2.jpg')
+                  )
+                ),
+                child: new Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                      Center(
+                  child: Icon(Icons.play_circle_outline,color: Colors.white.withOpacity(0.8),size:80.0),
+                ),
+                  ],
+                ),
+                margin: EdgeInsets.symmetric(horizontal: 5.0),
+                width: 130.0,
+              ),
+              Container(
+                color: Colors.black,
+                height: 40.0,
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  
+                  children: <Widget>[
+                    Text.rich(
+                     TextSpan(
+                       text:'S02:E05'
+                     ),style: TextStyle(
+                       color: Colors.white.withOpacity(0.7),
+                       fontSize: 19.0,
+                       fontWeight: FontWeight.w600
+                     ),
+                   ),
+                   SizedBox(height: 40.0,width: 15.0,),
+                   Icon(Icons.info_outline,color:Colors.grey,size:22.0)
+                    
+                ],),
+                width:130.0
+              ),
+              ],
+              ),
+              
+              
+            ],
+          ),
+        ),
+                new Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(width:10.0,height:10.0),
               Text.rich(
                      TextSpan(
                        
                        text:'Top Picks For You'
                      ),style: TextStyle(
                        color: Colors.white,
-                       fontSize: 12.0,
+                       fontSize: 14.0,
                        fontWeight: FontWeight.w800
                      ),
                    )
@@ -132,7 +250,6 @@ Widget build(BuildContext context){
             ],
           ),
         ),
-      
         ],
       ),
     ),
