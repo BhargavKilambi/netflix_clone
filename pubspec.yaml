@@ -47,6 +47,10 @@ flutter:
    - assets/images/ghoul.jpg
    - assets/images/hox.jpg
    - assets/images/str2.jpg
+   - assets/images/nk.jpg
+   - assets/images/js.png
+   - assets/images/owner.png
+   - assets/images/p2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
