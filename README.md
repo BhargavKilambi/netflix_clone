@@ -7,3 +7,7 @@ A Netflix Android clone UI using flutter
 <img src="ops/ss1.png" style="float:left" height="320" width=160>.
 <img src="ops/ss2.png" style="float:left" height="320" width=160>. <img src="ops/ss3.png" style="float:left" height="320" width=160>.
 
+# To-do
+ - Coming Soon page
+ - Downloads Tab
+ - Dynamic view pages
