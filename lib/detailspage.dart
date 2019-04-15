@@ -116,6 +116,28 @@ class DetailsPage extends StatelessWidget{
                   ],
                 ),
                 ),
+                 Container(
+                  width: c_width,
+                  padding: EdgeInsets.symmetric(vertical:5),
+                  child: Row(
+                  children: <Widget>[
+                    SizedBox(width:10),
+                    Flexible(
+                      child:   new Text(
+                  'Starring : '+SeriesData().series[data]['starring'],
+                  style: new TextStyle(
+                    fontSize: 13,
+                    color: Colors.white54,
+                    fontWeight: FontWeight.w100,
+                  ),
+                  textAlign: TextAlign.left,  
+                  softWrap: true,
+                ),
+                    )
+                    
+                  ],
+                ),
+                ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 10.0),
                   padding: EdgeInsets.symmetric(horizontal:20),
@@ -156,6 +178,19 @@ class DetailsPage extends StatelessWidget{
                         onPressed: (){},
                       ),
                       Text('Share',style: TextStyle(
+                        color:Colors.white30,
+                        fontSize: 10
+                      ),)
+                        ],
+                      ),
+                      SizedBox(width: 40,),
+                      Column(
+                        children: <Widget>[
+                          IconButton(
+                        icon: Icon(Icons.file_download,color:Colors.white),
+                        onPressed: (){},
+                      ),
+                      Text('Download',style: TextStyle(
                         color:Colors.white30,
                         fontSize: 10
                       ),)

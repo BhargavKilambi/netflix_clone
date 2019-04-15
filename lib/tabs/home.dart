@@ -18,13 +18,50 @@ Widget build(BuildContext context){
         
         children: <Widget>[
           Container(
+            padding: EdgeInsets.all(10),
          child: Center(
            child:new Column(
-             mainAxisAlignment: MainAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.start,
              children: <Widget>[
+               SizedBox(height: 10,),
+               Row(
+                 children: <Widget>[
+                 
+                 Container(
+                   width: 40,
+                   height: 40,
+                   child:Image.asset('assets/images/flix.png') ,
+                 ),
+                 SizedBox(width: 30,),
+                 Text('TV Shows',style: 
+                 TextStyle(
+                   fontSize: 15,color:Colors.white
+                 ),),
+                 SizedBox(width:30),
+                 Text('Movies',style: 
+                 TextStyle(
+                   fontSize: 15,color:Colors.white
+                 ),),
+                 SizedBox(width:30),
+                 Text('My List',style: 
+                 TextStyle(
+                   fontSize: 15,color:Colors.white
+                 ),)
+               ],),
                SizedBox(
                  width: double.infinity,
-                 height: 300.0,
+                 height: 100.0,
+               ),
+               Container(
+                 height: 150,
+                 width: double.infinity,
+                 padding: EdgeInsets.all(20),
+                 child: 
+                 Image.asset('assets/images/alclogo.png'),
+               ),
+               SizedBox(
+                 width: double.infinity,
+                 height: 50.0,
                ),
                new Row(
                  mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +71,8 @@ Widget build(BuildContext context){
                        text:'Future  •  Sci-fi  •  Apocalypse  •  Netflix Original'
                      ),style: TextStyle(
                        color: Colors.white,
-                       fontFamily: 'Montserrat'
+                       fontFamily: 'Montserrat',
+                       fontSize: 13
                      ),
                    )
                  ],
@@ -60,6 +98,7 @@ Widget build(BuildContext context){
                        Text('My List')
                      ],),
                    ),
+                   SizedBox(width: 10,),
                    FlatButton(
                      color: Colors.white,
                      onPressed: (){},
@@ -70,6 +109,7 @@ Widget build(BuildContext context){
                        ),)
                      ],),
                    ),
+                   SizedBox(width: 10,),
                     FlatButton(
                       textColor: Colors.white70,
                      onPressed: (){
@@ -96,7 +136,8 @@ Widget build(BuildContext context){
          color: Colors.blue,
          image: DecorationImage(
                 image: new AssetImage('assets/images/alc.jpg'),
-                colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.38),BlendMode.multiply),
+                
+                colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5),BlendMode.multiply),
           fit: BoxFit.fill
               )
                  ),
