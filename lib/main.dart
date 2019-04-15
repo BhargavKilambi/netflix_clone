@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'tabs/home.dart';
 import 'tabs/search.dart';
 import 'tabs/morepage.dart';
+import 'tabs/downloads.dart';
+
 void main() {
   runApp(new MaterialApp(
       // Title
@@ -45,7 +47,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
       body: new TabBarView(
         
         // Add tabs as widgets
-        children: <Widget>[new HomePage(), new SearchPage(), new Text('3'), new Text('4'), new MorePage()],
+        children: <Widget>[new HomePage(), new SearchPage(), new Text('3'), new DownloadPage(), new MorePage()],
         // set the controller
         controller: controller,
       ),
