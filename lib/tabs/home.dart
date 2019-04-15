@@ -31,7 +31,8 @@ Widget build(BuildContext context){
                      TextSpan(
                        text:'Future  •  Sci-fi  •  Apocalypse  •  Netflix Original'
                      ),style: TextStyle(
-                       color: Colors.white
+                       color: Colors.white,
+                       fontFamily: 'Montserrat'
                      ),
                    )
                  ],
@@ -56,7 +57,9 @@ Widget build(BuildContext context){
                      onPressed: (){},
                      child: new Row(children: <Widget>[
                        Icon(Icons.play_arrow),
-                       Text('Play')
+                       Text('Play',style: TextStyle(
+                         fontFamily: 'Montserrat'
+                       ),)
                      ],),
                    ),
                     FlatButton(
@@ -97,7 +100,8 @@ Widget build(BuildContext context){
                      ),style: TextStyle(
                        color: Colors.white,
                        fontSize: 14.0,
-                       fontWeight: FontWeight.w800
+                       fontWeight: FontWeight.w600,
+                       fontFamily: 'Montserrat'
                      ),
                    )
             ],
@@ -142,7 +146,7 @@ Widget build(BuildContext context){
                      ),style: TextStyle(
                        color: Colors.white.withOpacity(0.7),
                        fontSize: 19.0,
-                       fontWeight: FontWeight.w600
+                       fontFamily: 'Montserrat'
                      ),
                    ),
                    SizedBox(height: 40.0,width: 15.0,),
@@ -188,7 +192,7 @@ Widget build(BuildContext context){
                      ),style: TextStyle(
                        color: Colors.white.withOpacity(0.7),
                        fontSize: 19.0,
-                       fontWeight: FontWeight.w600
+                       fontFamily: 'Montserrat'
                      ),
                    ),
                    SizedBox(height: 40.0,width: 15.0,),
@@ -215,7 +219,8 @@ Widget build(BuildContext context){
                      ),style: TextStyle(
                        color: Colors.white,
                        fontSize: 14.0,
-                       fontWeight: FontWeight.w800
+                       fontWeight: FontWeight.w800,
+                       fontFamily: 'Montserrat'
                      ),
                    )
             ],

@@ -6,7 +6,10 @@ class MorePage extends StatelessWidget{
 Widget build(BuildContext context){
   return Scaffold(
     backgroundColor: Colors.black87,
-    body: new Container(
+    body:new Column(children: <Widget>[
+    Container(
+      height: 170.0,
+       color:Colors.black,
       padding: EdgeInsets.symmetric(horizontal: 10.0),
       child:new Center( 
         child:new Column(
@@ -75,8 +78,9 @@ Widget build(BuildContext context){
               TextSpan(text:'Manage Profiles'),
               style:TextStyle(
                 color: Colors.white.withOpacity(0.7),
-                fontSize: 12.0,
-                fontWeight: FontWeight.w700
+                fontSize: 15.0,
+                fontWeight: FontWeight.w200,
+                fontFamily: 'Montserrat'
               )
             ),
             ] 
@@ -85,7 +89,113 @@ Widget build(BuildContext context){
         ],
       ),
     )
+    ),
+    Container(
+      width: double.infinity,
+      height: 40.0,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+      ),
+      margin: EdgeInsets.all(10.0),
+      child: Row(children: <Widget>[
+        Icon(Icons.notifications,color: Colors.grey,size:20.0),
+        SizedBox(width: 10.0,),
+        Text('App Notifications',
+      style: TextStyle(
+        fontFamily: 'Montserrat',
+        color: Colors.grey
+      ),),
+      ],)
+      
+    ),
+    Container(
+      width: double.infinity,
+      height: 40.0,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+      ),
+      margin: EdgeInsets.all(10.0),
+      child: Row(children: <Widget>[
+        Icon(Icons.done,color: Colors.grey,size:20.0),
+        SizedBox(width: 10.0,),
+        Text('My List',
+      style: TextStyle(
+        fontFamily: 'Montserrat',
+        color: Colors.grey
+      ),),
+      ],)
+      
+    ),
+    Container(
+      width: double.infinity,
+      height: 40.0,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+      ),
+      margin: EdgeInsets.all(5.0),
+      child: Row(children: <Widget>[
+        SizedBox(width: 10.0,),
+        Text('App Settings',
+      style: TextStyle(
+        fontFamily: 'Montserrat',
+        color: Colors.grey
+      ),),
+      ],)
+      
+    ),
+    Container(
+      width: double.infinity,
+      height: 40.0,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+      ),
+      margin: EdgeInsets.all(5.0),
+      child: Row(children: <Widget>[
+        SizedBox(width: 10.0,),
+        Text('Account',
+      style: TextStyle(
+        fontFamily: 'Montserrat',
+        color: Colors.grey
+      ),),
+      ],)
+      
+    ),
+    Container(
+      width: double.infinity,
+      height: 40.0,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+      ),
+      margin: EdgeInsets.all(5.0),
+      child: Row(children: <Widget>[
+        SizedBox(width: 10.0,),
+        Text('Help',
+      style: TextStyle(
+        fontFamily: 'Montserrat',
+        color: Colors.grey
+      ),),
+      ],)
+      
+    ),
+    Container(
+      width: double.infinity,
+      height: 40.0,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+      ),
+      margin: EdgeInsets.all(5.0),
+      child: Row(children: <Widget>[
+        SizedBox(width: 10.0,),
+        Text('Sign Out',
+      style: TextStyle(
+        fontFamily: 'Montserrat',
+        color: Colors.grey
+      ),),
+      ],)
+      
     )
+    ],)
+
   );
 }
 

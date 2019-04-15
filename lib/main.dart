@@ -8,6 +8,9 @@ void main() {
       title: "Netflix Clone",
       debugShowCheckedModeBanner: false,
       // Home
+      theme: ThemeData(
+        fontFamily: 'Montserrat'
+      ),
       home: new MyHome()));
 }
 
@@ -46,17 +49,18 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
         // set the controller
         controller: controller,
       ),
+      resizeToAvoidBottomPadding: true,
       bottomNavigationBar: new Material(
         elevation: 1.0,
         color: Colors.black87,
         child: new TabBar(
           
-          indicatorSize: TabBarIndicatorSize.label,
+          labelPadding: EdgeInsets.symmetric(horizontal:5.0),
           indicatorColor: Colors.black,
           tabs: <Tab>[
+            
             new Tab(
-              // set icon to the tab
-              icon: new Icon(Icons.home,size: 30.0,),
+              icon: new Icon(Icons.home),
             ),
             new Tab(
               icon: new Icon(Icons.search),
@@ -66,6 +70,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
             ),
             new Tab(
               icon: new Icon(Icons.file_download),
+              
             ),
             new Tab(
               icon: new Icon(Icons.menu),
