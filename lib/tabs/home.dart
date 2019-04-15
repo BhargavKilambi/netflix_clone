@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import '../data.dart';
+import 'package:netflix_clone/detailspage.dart';
 class HomePage extends StatelessWidget{
 
 @override
@@ -14,6 +15,7 @@ Widget build(BuildContext context){
     ),
     body: new Container(
       child: new ListView(
+        
         children: <Widget>[
           Container(
          child: Center(
@@ -46,9 +48,15 @@ Widget build(BuildContext context){
                  children: <Widget>[
                     FlatButton(
                       textColor: Colors.white70,
-                     onPressed: (){},
+                     onPressed: (){
+                       
+                     },
                      child: new Column(children: <Widget>[
-                       Icon(Icons.add,color: Colors.white,),
+                       IconButton(
+                         icon:Icon(Icons.add,color: Colors.white),
+                         onPressed: (){
+                           _showToast(context);
+                         },),
                        Text('My List')
                      ],),
                    ),
@@ -64,10 +72,17 @@ Widget build(BuildContext context){
                    ),
                     FlatButton(
                       textColor: Colors.white70,
-                     onPressed: (){},
-                     child: new Column(children: <Widget>[
-                       Icon(Icons.info_outline,color: Colors.white,),
-                       Text('Info')
+                     onPressed: (){
+                       Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailsPage(
+                          data:'Alc'
+                        )),
+                          );
+                          },
+                          child: new Column(children: <Widget>[
+                            Icon(Icons.info_outline,color: Colors.white,),
+                            Text('Info')
                      ],),
                    )
                 
@@ -114,7 +129,14 @@ Widget build(BuildContext context){
             children: <Widget>[
               Column(
                 children: <Widget>[
-                Container(
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context)=>DetailsPage(
+                        data:'Ghl'
+                      )));
+                    },
+                    child:Container(
                   height: 200.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -125,14 +147,16 @@ Widget build(BuildContext context){
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                       Center(
-                  child: Icon(Icons.play_circle_outline,color: Colors.white.withOpacity(0.8),size:80.0),
+                  child: Icon(Icons.play_circle_outline,color: Colors.white.withOpacity(0.8),size:80.0
                 ),
-                
+                      )
                   ],
                 ),
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
                 width: 130.0,
-              ),
+              ) ,
+                  )
+                ,
               Container(
                 color: Colors.black,
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -231,25 +255,50 @@ Widget build(BuildContext context){
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              Container(
+              GestureDetector(
+                onTap: (){
+                   Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailsPage(
+                          data:'Ghl'
+                        )),
+                          );
+                },
+                child: Container(
                 child: Image.asset('assets/images/ghoul.jpg'),
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
                 width: 130.0,
               ),
-              Container(
+              ),
+              GestureDetector(
+                onTap: (){
+                   Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailsPage(
+                          data:'Alc'
+                        )),
+                          );
+                },
+                child: Container(
                 child: Image.asset('assets/images/alc.jpg'),
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
-                width: 140.0,
+                width: 130.0,
               ),
-              Container(
+              ),
+              GestureDetector(
+                onTap: (){
+                   Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => DetailsPage(
+                          data:'Hoc'
+                        )),
+                          );
+                },
+                child: Container(
                 child: Image.asset('assets/images/hox.jpg'),
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
-                width: 140.0,
+                width: 130.0,
               ),
-              Container(
-                child: Image.asset('assets/images/alc.jpg'),
-                margin: EdgeInsets.symmetric(horizontal: 5.0),
-                width: 140.0,
               ),
               
             ],
@@ -260,5 +309,18 @@ Widget build(BuildContext context){
     ),
   );
 }
+
+  void _showToast(BuildContext context) {
+    final scaffold = Scaffold.of(context);
+    scaffold.showSnackBar(
+      SnackBar(
+        content: const Text('Added to My List'),
+        
+        action: SnackBarAction(
+          textColor: Colors.white54,
+            label: 'OK', onPressed: scaffold.hideCurrentSnackBar),
+      ),
+    );
+  }
 
 }

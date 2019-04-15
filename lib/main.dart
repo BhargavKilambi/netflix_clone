@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'tabs/home.dart';
 import 'tabs/search.dart';
 import 'tabs/morepage.dart';
 import 'tabs/downloads.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_){
+runApp(new MaterialApp(
       // Title
       title: "Netflix Clone",
       debugShowCheckedModeBanner: false,
@@ -14,6 +16,8 @@ void main() {
         fontFamily: 'Montserrat'
       ),
       home: new MyHome()));
+  });
+  
 }
 
 class MyHome extends StatefulWidget {
@@ -45,7 +49,6 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new TabBarView(
-        
         // Add tabs as widgets
         children: <Widget>[new HomePage(), new SearchPage(), new Text('3'), new DownloadPage(), new MorePage()],
         // set the controller

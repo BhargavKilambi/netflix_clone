@@ -96,7 +96,7 @@ Widget build(BuildContext context){
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      margin: EdgeInsets.all(10.0),
+      margin: EdgeInsets.all(5.0),
       child: Row(children: <Widget>[
         Icon(Icons.notifications,color: Colors.grey,size:20.0),
         SizedBox(width: 10.0,),
@@ -108,13 +108,14 @@ Widget build(BuildContext context){
       ],)
       
     ),
+    Divider(color:Colors.black),
     Container(
       width: double.infinity,
       height: 40.0,
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      margin: EdgeInsets.all(10.0),
+      margin: EdgeInsets.symmetric(horizontal:5.0),
       child: Row(children: <Widget>[
         Icon(Icons.done,color: Colors.grey,size:20.0),
         SizedBox(width: 10.0,),
@@ -126,13 +127,14 @@ Widget build(BuildContext context){
       ],)
       
     ),
+    Divider(color:Colors.black),
     Container(
       width: double.infinity,
-      height: 40.0,
+      height: 30.0,
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      margin: EdgeInsets.all(5.0),
+      margin: EdgeInsets.symmetric(horizontal:5.0),
       child: Row(children: <Widget>[
         SizedBox(width: 10.0,),
         Text('App Settings',
@@ -143,13 +145,14 @@ Widget build(BuildContext context){
       ],)
       
     ),
+    Divider(color:Colors.black),
     Container(
       width: double.infinity,
-      height: 40.0,
+      height: 30.0,
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      margin: EdgeInsets.all(5.0),
+      margin: EdgeInsets.symmetric(horizontal:5.0),
       child: Row(children: <Widget>[
         SizedBox(width: 10.0,),
         Text('Account',
@@ -160,13 +163,14 @@ Widget build(BuildContext context){
       ],)
       
     ),
+    Divider(color:Colors.black),
     Container(
       width: double.infinity,
-      height: 40.0,
+      height: 30.0,
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      margin: EdgeInsets.all(5.0),
+      margin: EdgeInsets.symmetric(horizontal:5.0),
       child: Row(children: <Widget>[
         SizedBox(width: 10.0,),
         Text('Help',
@@ -177,13 +181,14 @@ Widget build(BuildContext context){
       ],)
       
     ),
+    Divider(color:Colors.black),
     Container(
       width: double.infinity,
-      height: 40.0,
+      height: 30.0,
       decoration: BoxDecoration(
         color: Colors.transparent,
       ),
-      margin: EdgeInsets.all(5.0),
+      margin: EdgeInsets.symmetric(horizontal:5.0),
       child: Row(children: <Widget>[
         SizedBox(width: 10.0,),
         Text('Sign Out',
