@@ -11,4 +11,3 @@ A Netflix Android clone UI using flutter
 
 # To-do
  - Coming Soon Tab
- - Dynamic view pages
