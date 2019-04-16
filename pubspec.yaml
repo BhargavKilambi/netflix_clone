@@ -55,6 +55,9 @@ flutter:
    - assets/images/tra.jpg
    - assets/images/flix.png
    - assets/images/alclogo.png
+   - assets/images/obli.jpg
+   - assets/images/ourplanet.jpg
+   - assets/images/sabrina.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

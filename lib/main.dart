@@ -4,6 +4,7 @@ import 'tabs/home.dart';
 import 'tabs/search.dart';
 import 'tabs/morepage.dart';
 import 'tabs/downloads.dart';
+import 'tabs/comingsoon.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_){
@@ -50,7 +51,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     return new Scaffold(
       body: new TabBarView(
         // Add tabs as widgets
-        children: <Widget>[new HomePage(), new SearchPage(), new Text('3'), new DownloadPage(), new MorePage()],
+        children: <Widget>[new HomePage(), new SearchPage(), new ComingSoonPage(), new DownloadPage(), new MorePage()],
         // set the controller
         controller: controller,
       ),
